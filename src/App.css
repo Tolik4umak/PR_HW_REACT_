@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.box{
+  width: 900px;
+  margin: 0 auto;
+} 
+
+.total span{
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: underline;
+  font-style: italic;
+}
