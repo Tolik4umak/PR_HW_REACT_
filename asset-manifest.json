@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/PR_HW_REACT_/static/css/main.e77240de.css",
+    "main.js": "/PR_HW_REACT_/static/js/main.60a4f3a6.js",
+    "static/js/787.c1112931.chunk.js": "/PR_HW_REACT_/static/js/787.c1112931.chunk.js",
+    "index.html": "/PR_HW_REACT_/index.html",
+    "main.e77240de.css.map": "/PR_HW_REACT_/static/css/main.e77240de.css.map",
+    "main.60a4f3a6.js.map": "/PR_HW_REACT_/static/js/main.60a4f3a6.js.map",
+    "787.c1112931.chunk.js.map": "/PR_HW_REACT_/static/js/787.c1112931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e77240de.css",
+    "static/js/main.60a4f3a6.js"
+  ]
+}
