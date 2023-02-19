@@ -4,39 +4,39 @@ import Contant from './components/Contant/Contant';
 import Form from './components/Form/Form';
 import Header from './components/Header/Header';
 import Total from './components/Total/Total';
+import axios from "axios";
+import { useEffect } from 'react';
 
 
 function App() {
 
-  const sourceCourses = [
-    {
-      id: 1,
-      name: "Frontend Pro",
-      parts: [
-        {
-          id: 1,
-          name: "Вводные занятия по React",
-          tasks: 10
-        },
-        {
-          id: 2,
-          name: "Использование React хуков",
-          tasks: 5
-        },
-        {
-          id: 3,
-          name: "Использование библиотеки react-router-dom",
-          tasks: 15
-        }
-      ]
-      
-    }
-  ]
+  const [cources , setCources] = useState([])
 
-  const [cources , setCources] = useState(sourceCourses)
+  const fetchAxios = (link) => {
+    return axios.get(link)
+  }
+
+  useEffect(() => {
+    fetchAxios('http://localhost:3001/courses')
+      .then(resp => setCources(resp.data))
+      .catch(err => alert(err))
+  },[])
 
   const addCard = (cource) => {
-    setCources([...cources, cource])
+    axios.post("http://localhost:3001/courses",{
+      ...cource
+    })
+      .then(resp => setCources([...cources, resp.data]))
+
+  }
+
+  const delCard = (delId) => {
+    axios.delete(`http://localhost:3001/courses/${delId}`)
+    .then((resr) => {
+        const newArr = cources.filter(({id}) => id !== delId)
+        setCources(newArr)
+      })
+
   }
 
 
@@ -50,6 +50,7 @@ function App() {
               <Header title={course.name}/>
               <Contant parts={course.parts}/>
               <Total count={course.parts.reduce((acum,val) => acum+ val.tasks ,0)}/>
+              <button onClick={() => delCard(course.id)}>delete</button>
             </div>
           )
         )}

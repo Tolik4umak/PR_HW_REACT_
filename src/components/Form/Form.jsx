@@ -4,8 +4,6 @@ export default function Form({addCard}) {
 
     const onClick = (e) => {
         e.preventDefault()
-        console.log(parts)
-
         const course = {
             id: Date.now(),
             name: e.target.title.value ,
