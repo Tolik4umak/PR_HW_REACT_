@@ -41,10 +41,7 @@
 
 .box{
   width: 900px;
-  margin: 0 auto;
-  background-color: antiquewhite;
-  padding: 10px;
-  margin: 10px;
+  margin: 10px auto;
 } 
 
 .total span{

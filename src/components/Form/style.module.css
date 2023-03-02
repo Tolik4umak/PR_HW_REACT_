@@ -1,0 +1,60 @@
+.form{
+    width: 50%;
+    margin: 10px auto;
+    background: rgb(96, 120, 165);
+    border-radius: 20px;
+    padding: 20px;
+    display: grid;
+    grid-gap: 10px;
+    /* justify-items: center; */
+}
+
+
+.input_box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 10px;
+}
+
+.form input, .form button {
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+
+.form button {
+    border-radius: 7px;
+}
+
+.delete_part{
+    background: rgb(207, 135, 135);
+}
+.add_part{
+    background: rgb(154, 172, 146);
+}
+
+.input_box button:hover{
+    filter:brightness(1.1);
+}
+.input_box button:active{
+    transform: scale(0.9);
+}
+
+.form input:focus {
+    box-shadow: inset 0px 0px 15px -5px rgb(65, 65, 65);
+}
+
+.submit{
+    width: 50%;
+    justify-self: center;
+    text-transform: uppercase;
+    background: rgb(61, 81, 117);
+    box-shadow: 4px 4px black ;
+    color: white;
+    font-weight: bold;
+}
+.submit:active{
+    transform: translateX(3px) translateY(3px);
+    box-shadow: 1px 1px black ;
+
+}
